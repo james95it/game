@@ -38,7 +38,17 @@
         /* Thẻ Game (Card) */
         .game-card { background-color: #1f2937; border-radius: 12px; overflow: hidden; border: 1px solid #374151; display: flex; flex-direction: column; transition: transform 0.3s, border-color: 0.3s; }
         .game-card:hover { transform: translateY(-5px); border-color: #6366f1; }
-        .game-img { width: 100%; height: 160px; object-cover: cover; background-color: #374151; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+        .game-img { 
+    width: 80px;          /* Cố định chiều rộng của icon */
+    height: 80px;         /* Cố định chiều cao của icon */
+    object-fit: contain;  /* Giữ nguyên tỷ lệ icon, không bị bóp méo hay cắt mất hình */
+    display: block;
+    margin: 20px auto 10px auto; /* Căn giữa icon và tạo khoảng cách trên dưới */
+    border-radius: 16px;  /* Bo tròn 4 góc của icon cho giống giao diện App Store/Google Play */
+    background-color: #2d3748; /* Tạo một lớp nền tối nhẹ phía sau icon */
+    padding: 8px;         /* Tạo khoảng cách giữa hình icon và viền nền */
+}
+
         .game-info { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; }
         .badge { display: inline-block; align-self: flex-start; font-size: 11px; font-weight: 600; padding: 2px 8px; rounded-radius: 4px; border-radius: 4px; text-transform: uppercase; }
         .badge.action { background-color: rgba(239, 68, 68, 0.2); color: #f87171; }
@@ -81,11 +91,11 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gameGrid">
             
             <!-- GAME 1 -->
-            <div class="game-card" data-category="tri-tue">
+            <div class="game-card" data-category="nhap-vai">
     <!-- Nếu bạn up ảnh lên cùng thư mục với file index.html trên GitHub, chỉ cần điền tên file ảnh -->
     <img src="pokeball.png" alt="Thumbnail Game" class="game-img">
     <div class="game-info">
-        <span class="badge puzzle">Trí tuệ</span>
+        <span class="badge puzzle">Nhập Vai</span>
         <h3 class="game-title">Pokemon Fire Red Cloud Save</h3>
         <p class="game-desc">Pokemon Fire Red nhưng chơi bằng Cloud Save</p>
         <a href="https://james95it.github.io/pkmcloudsave/" target="_blank" class="play-btn">Chơi ngay 🚀</a>
@@ -93,30 +103,16 @@
 </div>
 
             <!-- GAME 2 -->
-            <div class="game-card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1" data-category="tri-tue">
-                <img src="https://unsplash.com" alt="Thumbnail Game" class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <span class="text-xs font-semibold bg-green-500/20 text-green-400 px-2 py-0.5 rounded">Trí tuệ</span>
-                    <h3 class="game-title text-lg font-bold mt-2 text-white">Snake 2</h3>
-                    <p class="text-gray-400 text-xs mt-1 line-clamp-2">Siêu rắn săn mồi pro vip plus max </p>
-                    <a href="https://james95it.github.io/snake2" target="_blank" class="block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm py-2 px-4 rounded-lg mt-4 transition">
-                        Chơi ngay 🚀
-                    </a>
-                </div>
-            </div>
-
-            <!-- GAME 3 -->
-            <div class="game-card bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1" data-category="chien-thuat">
-                <img src="https://unsplash.com" alt="Thumbnail Game" class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <span class="text-xs font-semibold bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded">Chiến thuật</span>
-                    <h3 class="game-title text-lg font-bold mt-2 text-white">Tên Game Chiến Thuật 3</h3>
-                    <p class="text-gray-400 text-xs mt-1 line-clamp-2">Xây dựng quân đội và bày binh bố trận để giành chiến thắng vinh quang.</p>
-                    <a href="THAY_LINK_GAME_CỦA_BẠN_VÀO_ĐÂY" target="_blank" class="block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm py-2 px-4 rounded-lg mt-4 transition">
-                        Chơi ngay 🚀
-                    </a>
-                </div>
-            </div>
+            <div class="game-card" data-category="hanh-dong">
+    <!-- Nếu bạn up ảnh lên cùng thư mục với file index.html trên GitHub, chỉ cần điền tên file ảnh -->
+    <img src="snake.png" alt="Thumbnail Game" class="game-img">
+    <div class="game-info">
+        <span class="badge puzzle">Hành Động</span>
+        <h3 class="game-title">Snake 2</h3>
+        <p class="game-desc">Snake version vip pro max premium plus ultra</p>
+        <a href="https://james95it.github.io/snake2/" target="_blank" class="play-btn">Chơi ngay 🚀</a>
+    </div>
+</div>
 
             <!-- Bạn có thể copy đoạn code từ "<div class="game-card..." đến "</div>" ở trên để tạo thêm Game số 4, 5, 6... -->
 
